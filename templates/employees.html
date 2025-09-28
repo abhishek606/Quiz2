@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employees Data</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        table { border-collapse: collapse; width: 90%; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px 12px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        nav a { margin-right: 15px; text-decoration: none; color: #333; }
+        nav a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Employees Data</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Age</th>
+                <th>Joining Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in employees %}
+            <tr>
+                <td>{{ emp.id }}</td>
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.department }}</td>
+                <td>{{ emp.role }}</td>
+                <td>{{ emp.salary }}</td>
+                <td>{{ emp.age }}</td>
+                <td>{{ emp.joining_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
